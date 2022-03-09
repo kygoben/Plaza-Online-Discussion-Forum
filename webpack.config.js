@@ -1,33 +1,37 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-    entry: path.join(__dirname, "src", "index.js"),
-    mode: "development",
+    entry: './public/index.js',
     output: {
-        path: path.resolve(__dirname, "dist")
+        filename: 'bundle.[hash].js',
+        path: path.resolve(__dirname, 'dist')
+    },
+    mode: 'development',
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './public/index.html'
+        })
+    ],
+    resolve: {
+        modules: [__dirname, 'src', 'node_modules'],
+        extensions: ['*', '.js', '.jsx']
     },
     module: {
         rules: [
             {
-                test: /\.?js$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                    options: {
-                        presets: ["@babel/preset-env", "@babel/preset-react"]
-                    }
-                }
+                loader: require.resolve('babel-loader')
             },
             {
-                test: /\.?css$/i,
-                use: ["style-loader", "css-loader"]
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.png|svg|jpg|gif$/,
+                use: ['file-loader']
             }
         ]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: path.join(__dirname, "src", "index.html")
-        })
-    ]
-};
+    }
+}
