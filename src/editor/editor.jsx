@@ -2,15 +2,18 @@ import React, { useState } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
-export const Editor = (props) => {
+import classNames from 'classnames';
+import styles from './editor.module.css';
+
+export const Editor = () => {
     const [text, setText] = useState();
 
     return (
-        <div className="editor">
+        <div className={classNames(styles.editor)}>
             <CKEditor
                 editor={ ClassicEditor }
                 data={text}
-                onChange={ ( event, editor ) => {
+                onChange={ (event, editor) => {
                     const data = editor.getData();
                     setText(data);
                 } }
