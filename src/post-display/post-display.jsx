@@ -1,16 +1,18 @@
 import React from 'react';
 import DOMPurify from 'dompurify';
+import styles from './post-display.module.css';
 
 export const PostDisplay = ({
     html
 }) => {
     const clean = DOMPurify.sanitize(html);
 
-    return <div
+    return <span
+        className={styles.postDisplay}
         dangerouslySetInnerHTML={{
             __html: clean
         }}
-    ></div>;
+    ></span>;
 };
 
 /**
