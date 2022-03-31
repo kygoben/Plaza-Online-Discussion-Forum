@@ -9,13 +9,12 @@ export const Editor = ({
     text,
     setText
 }) => {
-
     return (
         <div className={classNames(styles.editor)}>
             <CKEditor
                 editor={ ClassicEditor }
                 data={text}
-                onChange={ (event, editor) => {
+                onChange={ (_, editor) => {
                     const data = editor.getData();
                     setText(data);
                 } }
