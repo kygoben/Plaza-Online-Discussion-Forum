@@ -11,16 +11,20 @@ const typeKey = {
 
 export const Button = ({
     onClick,
-    type = buttonTypes.Submit
+    type = buttonTypes.Submit,
+    className
 }) => {
     return (
-        <button
-            onClick={onClick}
-            className={classNames(styles.button, typeKey[type])}
-            role='button'
-        >
-            {type}
-        </button>
+        <div className={className}>
+            <button
+                onClick={onClick}
+                className={classNames(styles.button, typeKey[type])}
+                role='button'
+            >
+                {type}
+            </button>
+        </div>
+        
     );
 };
 

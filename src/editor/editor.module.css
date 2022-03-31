@@ -2,4 +2,5 @@
     display: grid;
     width: auto;
     min-width: 650px;
+    padding-bottom: 4px;
 }

@@ -3,5 +3,6 @@ export const cardTypes = {
     darkGray: 'darkGray',
     white: 'white',
     red: 'red',
-    pink: 'pink'
+    pink: 'pink',
+    lightBlue: 'lightBlue'
 };

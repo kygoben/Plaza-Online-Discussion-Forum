@@ -1,0 +1,18 @@
+.end {
+    display: flex;
+    justify-content: end;
+}
+
+.innerButton {
+    margin-right: 4px;
+}
+
+.reply {
+    margin: 0;
+    cursor: pointer;
+}
+
+.reply:hover {
+    text-decoration: underline;
+    color: blue;
+}
