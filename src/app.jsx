@@ -3,6 +3,8 @@ import { PostDisplay } from './post-display';
 import { Card, cardTypes } from './UIComponents/Card';
 import { Reply } from './reply';
 import { MessageDisplay } from './message-display/message-display';
+import { Header } from './header/header'; 
+
 
 const message = [{
     post: '<p>Hello, everyone.</p><p>I am writing this post to let <strong>everyone</strong> know what you can now reply to messages. This is super good!</p><p>We have just a <i>few</i> more things to do, now:</p><ol><li>You can reply, but you currently cannot create posts!</li><li>The setup would be ugly, but using reducers and/or Redux could go a long way</li><li>We need to add the like feature</li><li>We need the navigation bar</li></ol>',
@@ -28,8 +30,8 @@ const message = [{
 
 export const App = () => {
     
-    return <div>
+    return <Header>
         <MessageDisplay message = {message[0]}/>
         <MessageDisplay message = {message[1]}/>
-        </div>
+        </Header>
 }
