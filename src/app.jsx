@@ -37,7 +37,7 @@ export const App = () => {
             Create new message
             <Reply onSubmit={createMessage}/>
         </Header>
-    ); 
+    );
 }
 
 // globalThis.crypto.randomUUID
