@@ -3,7 +3,6 @@ import { Card, cardTypes } from '../UIComponents/Card';
 import React, { useState } from 'react';
 import { Button, buttonTypes } from '../UIComponents/Button';
 import styles from './reply.module.css';
-import classNames from 'classnames';
 
 export const Reply = ({
     onSubmit
@@ -39,7 +38,7 @@ export const Reply = ({
                     </div>
                 </> : 
                 <h3
-                    className={classNames(styles.reply, styles.end)}
+                    className={styles.reply}
                     onClick={() => {
                         setIsVisible(true);
                     } }
