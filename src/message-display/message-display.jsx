@@ -1,38 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { PostDisplay } from '../post-display';
 import { Card, cardTypes } from '../UIComponents/Card';
 import { Reply } from '../reply';
 
-export const MessageDisplay = (props) => {
-
-    const [ messages, setMessage ] = useState(props.message);
-
+export const MessageDisplay = ({
+    message,
+    updateMessage
+}) => {
     const submitReply = (reply) => {
-        const {replies} = messages;
+        const {replies} = message;
         replies.push({
             post: reply,
             likes: 0,
-            id: Date.now()
+            id: globalThis.crypto.randomUUID()
         })
 
-        setMessage({
-            ...messages,
+        updateMessage({
+            ...message,
             replies
         });
-
-        console.log(replies);
     }
 
     return (
-        <div className='app'>
+        <div>
             <Card type={cardTypes.darkGray}>
-                <PostDisplay html={messages.post}/>
-                {messages.replies.map((reply) => 
+                <PostDisplay html={message.post}/>
+                {message.replies.map((reply) => 
                     <Card type={cardTypes.lightGray} key={reply.id}>
                         <PostDisplay html={reply.post}/>
                     </Card>)
                 }
-                
             </Card>
 
             <Reply
@@ -40,6 +37,4 @@ export const MessageDisplay = (props) => {
             />
         </div>
     );
-
-
 }
