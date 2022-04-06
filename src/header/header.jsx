@@ -5,7 +5,7 @@ export const Header = (props) => {
     return (
         <div>
             <div className = {styles.header}>
-                Header
+                <strong>PLAZA</strong>
             </div>
             {props.children}
         </div>
