@@ -4,14 +4,15 @@ import styles from './button.module.css';
 import { buttonTypes } from './button-types';
 
 const typeKey = {
-    [buttonTypes.Submit]: styles.submit,
-    [buttonTypes.Update]: styles.update,
-    [buttonTypes.Cancel]: styles.cancel
+    [buttonTypes.green]: styles.green,
+    [buttonTypes.blue]: styles.blue,
+    [buttonTypes.red]: styles.red
 }
 
 export const Button = ({
     onClick,
-    type = buttonTypes.Submit,
+    type = buttonTypes.green,
+    children,
     className
 }) => {
     return (
@@ -21,7 +22,7 @@ export const Button = ({
                 className={classNames(styles.button, typeKey[type])}
                 role='button'
             >
-                {type}
+                {children}
             </button>
         </div>
         
