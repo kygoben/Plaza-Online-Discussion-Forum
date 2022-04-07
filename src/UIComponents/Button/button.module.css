@@ -1,16 +1,16 @@
-.update {
+.blue {
     background-color: #36A9AE;
     background-image: linear-gradient(#37ADB2, #329CA0);
     border: 1px solid #2A8387;
 }
 
-.submit {
+.green {
     background-color: #bfffbf;
     background-image: linear-gradient(#007D00, #00b300);
     border: 1px solid #00b300;
 }
 
-.cancel {
+.red {
     background-color: #FF8080;
     background-image: linear-gradient(#B30000, #FF0000);
     border: 1px solid #FFBFBF;
@@ -34,7 +34,6 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   width: auto;
-  max-width: 85px;
 }
 
 .button:hover {

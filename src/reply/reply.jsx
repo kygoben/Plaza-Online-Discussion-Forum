@@ -20,21 +20,25 @@ export const Reply = ({
                     />
                     <div className={styles.end}>
                         <Button
-                            type={buttonTypes.Submit}
+                            type={buttonTypes.green}
                             onClick={() => {
                                 if (!text) return;
                                 onSubmit(text);
                                 setText('');
                             } }
                             className={styles.innerButton}
-                        />
+                        >
+                            Submit
+                        </Button>
                         <Button
-                            type={buttonTypes.Cancel}
+                            type={buttonTypes.red}
                             onClick={() => {
                                 setText('');
                                 setIsVisible(false);
                             } }
-                        />
+                        >
+                            Cancel
+                        </Button>
                     </div>
                 </> : 
                 <h3

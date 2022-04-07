@@ -1,5 +1,5 @@
 export const buttonTypes = {
-    Submit: 'Submit',
-    Cancel: 'Cancel',
-    Update: 'Update',
+    green: 'green',
+    red: 'red',
+    blue: 'blue',
 };
