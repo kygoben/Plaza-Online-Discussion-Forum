@@ -3,6 +3,7 @@ import { MessageDisplay } from './message-display';
 import { Header } from './header';
 import { initMessages } from '../dummy-data';
 import { Reply } from './reply';
+import { Panel } from './panel';
 
 export const App = () => {
     const [messages, setMessages] = useState(initMessages);
@@ -27,15 +28,17 @@ export const App = () => {
 
     return (
         <Header>
-            {messages.map(
-                (message, index) =>
-                    <MessageDisplay
-                        message={message}
-                        updateMessage={updateMessage(index)}
-                    />
-            )}
-            Create new message
-            <Reply onSubmit={createMessage}/>
+            <Panel>
+                {messages.map(
+                    (message, index) =>
+                        <MessageDisplay
+                            message={message}
+                            updateMessage={updateMessage(index)}
+                        />
+                )}
+                Create new message
+                <Reply onSubmit={createMessage}/>
+            </Panel>
         </Header>
     );
 }

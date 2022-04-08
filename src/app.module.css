@@ -1,9 +1,0 @@
-.app {
-    border: 2px solid red;
-    display: grid;
-    grid-template-columns: 25% auto;
-}
-
-.panel {
-    background-color: palevioletred;
-}

@@ -1,0 +1,13 @@
+.panel {
+    background-color: palevioletred;
+    position: absolute;
+    height: 94%;
+    width: 20%;
+    overflow: auto;
+    padding: 5px;
+}
+
+.children {
+    margin-left: 20%;
+    padding-left: 1rem;
+}
