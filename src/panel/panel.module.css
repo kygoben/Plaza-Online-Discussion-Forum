@@ -1,13 +1,26 @@
+.wrapper {
+    position: absolute;
+    height: 94%;
+    width: 100%;
+}
+
 .panel {
     background-color: palevioletred;
     position: absolute;
-    height: 94%;
+    top: 0;
+    bottom: 0;
     width: 250px;
     overflow: auto;
     padding: 5px;
 }
 
 .children {
+    position: absolute;
     margin-left: 250px;
-    padding-left: 1rem;
+    padding: 1rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
 }

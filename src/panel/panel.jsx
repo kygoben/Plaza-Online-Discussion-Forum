@@ -7,7 +7,7 @@ export const Panel = ({
     children
 }) => {
     return (
-        <>
+        <div className={styles.wrapper}>
             <div className={styles.panel}>
                 {
                     [...Array(10).keys()].map(() => thejsx)
@@ -16,6 +16,6 @@ export const Panel = ({
             <div className={styles.children}>
                 {children}
             </div>
-        </>
+        </div>
     );
 }
