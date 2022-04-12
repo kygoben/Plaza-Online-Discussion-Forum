@@ -1,18 +1,24 @@
 import React from 'react';
 import DOMPurify from 'dompurify';
 import styles from './post-display.module.css';
+import { Likes } from '../likes/likes';
 
 export const PostDisplay = ({
     html
 }) => {
     const clean = DOMPurify.sanitize(html);
 
-    return <span
-        className={styles.postDisplay}
-        dangerouslySetInnerHTML={{
-            __html: clean
-        }}
-    ></span>;
+    return <span className={styles.wrapper}>
+        <span
+            className={styles.postDisplay}
+            dangerouslySetInnerHTML={{
+                __html: clean
+            }}
+        ></span>
+
+        <Likes votes = {69}/>
+
+    </span>;
 };
 
 /**

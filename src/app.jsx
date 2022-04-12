@@ -4,6 +4,7 @@ import { Header } from './header';
 import { initMessages } from '../dummy-data';
 import { Reply } from './reply';
 import { Panel } from './panel';
+import { Likes } from './likes/likes';
 
 export const App = () => {
     const [messages, setMessages] = useState(initMessages);
@@ -29,6 +30,7 @@ export const App = () => {
     return (
         <Header>
             <Panel>
+                <Likes votes = {69}/>
                 {messages.map(
                     (message, index) =>
                         <MessageDisplay

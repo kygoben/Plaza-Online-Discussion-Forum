@@ -1,0 +1,23 @@
+.upVote{
+
+}
+
+.downVote{
+    transform: 
+        rotate(180deg);
+        /* scale(1, -1); */
+        /* color: #000080;
+        -moz-transform: scale(-1, 1);
+        -webkit-transform: scale(-1, 1);
+        -o-transform: scale(-1, 1);
+        -ms-transform: scale(-1, 1);
+        transform: scale(-1, 1); */
+    /* border: 2px solid red; */
+
+}
+
+.wrapper{
+    display:grid;
+    width: 1rem;
+    max-height: 4rem;
+}
