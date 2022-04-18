@@ -30,7 +30,6 @@ export const App = () => {
     return (
         <Header>
             <Panel>
-                <Likes votes = {69}/>
                 {messages.map(
                     (message, index) =>
                         <MessageDisplay
