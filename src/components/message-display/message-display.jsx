@@ -2,24 +2,13 @@ import React from 'react';
 import { PostDisplay } from '../post-display';
 import { Card, cardTypes } from '../UIComponents/Card';
 import { Reply } from '../reply';
+import { useDispatch } from 'react-redux';
+import { createReply } from '../../posts-slice';
 
 export const MessageDisplay = ({
-    message,
-    updateMessage
+    message
 }) => {
-    const submitReply = (reply) => {
-        const {replies} = message;
-        replies.push({
-            post: reply,
-            likes: 0,
-            id: globalThis.crypto.randomUUID()
-        })
-
-        updateMessage({
-            ...message,
-            replies
-        });
-    }
+    const dispatch = useDispatch();
 
     return (
         <div>
@@ -33,7 +22,10 @@ export const MessageDisplay = ({
             </Card>
 
             <Reply
-                onSubmit={submitReply}
+                onSubmit={ (reply) => dispatch(createReply({
+                    id: message.id,
+                    reply
+                })) }
             />
         </div>
     );
