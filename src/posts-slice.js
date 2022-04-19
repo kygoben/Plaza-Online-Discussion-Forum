@@ -10,8 +10,7 @@ export const postsSlice = createSlice({
         createPost: (state, action) => {
             state.push({
                 post: action.payload,
-                likes: 0,
-                dislikes: 0,
+                votes: 0,
                 id: globalThis.crypto.randomUUID(),
                 replies: []
             });
@@ -19,14 +18,21 @@ export const postsSlice = createSlice({
         createReply: (state, action) => {
             state.find(post => post.id === action.payload.id).replies.push({
                 post: action.payload.reply,
-                likes: 0,
-                dislikes: 0,
+                votes: 0,
                 id: globalThis.crypto.randomUUID()
-            })
+            });
+        },
+        updateReplyVotes: (state, action) => {
+            state
+                .find(post => post.id === action.payload.postId).replies
+                .find(reply => reply.id === action.payload.replyId).votes += action.payload.value;
+        },
+        updatePostVotes: (state, action) => {
+            state.find(post => post.id === action.payload.postId).votes += action.payload.value;
         }
     }
 });
 
-export const { createPost, createReply } = postsSlice.actions;
+export const { createPost, createReply, updateReplyVotes, updatePostVotes } = postsSlice.actions;
 
 export default postsSlice.reducer;

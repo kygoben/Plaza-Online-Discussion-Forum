@@ -4,7 +4,9 @@ import styles from './post-display.module.css';
 import { Likes } from '../likes';
 
 export const PostDisplay = ({
-    html
+    html,
+    updateVotes,
+    votes
 }) => {
     const clean = DOMPurify.sanitize(html);
 
@@ -16,8 +18,7 @@ export const PostDisplay = ({
             }}
         ></span>
 
-        <Likes votes = {69}/>
-
+        <Likes votes={votes} updateVotes={updateVotes}/>
     </span>;
 };
 

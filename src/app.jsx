@@ -10,6 +10,8 @@ export const App = () => {
     const posts = useSelector(state => state.posts);
     const dispatch = useDispatch();
 
+    console.log(posts);
+
     return (
         <Header>
             <Panel>
