@@ -1,20 +1,21 @@
 import React , {useState} from "react";
 import styles from "./likes.module.css"
 
-export const Likes = (props) => {
-    const [likes, setLikes] = useState(props.votes);
-
+export const Likes = ({
+    votes,
+    updateVotes
+}) => {
     return (
         <div className={styles.wrapper}>
-            <button className={styles.upVote} onClick={() => setLikes(likes + 1)}>
+            <button className={styles.upVote} onClick={() => updateVotes(1)}>
                 ^
             </button>
 
             <span>
-                {likes}
+                {votes}
             </span>
 
-            <button className={styles.downVote} onClick={() => setLikes(likes - 1)}>
+            <button className={styles.downVote} onClick={() => updateVotes(-1)}>
                 ^
             </button>
         </div>
