@@ -9,6 +9,7 @@ export const postsSlice = createSlice({
     reducers: {
         createPost: (state, action) => {
             state.push({
+                title: 'blank Title',
                 post: action.payload,
                 votes: 0,
                 id: globalThis.crypto.randomUUID(),
