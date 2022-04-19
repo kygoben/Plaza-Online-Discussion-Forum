@@ -1,15 +1,7 @@
 .header { 
-    height: 3rem;
     background-color: blue;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     color:white;
-    text-align:left;
-    text-indent: 25px;
-    padding-top: 5px;
-    size: 200px;
-    font-family: Copperplate;
-    font-size: 30px;
-    
 }
 
 
