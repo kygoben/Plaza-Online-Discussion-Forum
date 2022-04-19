@@ -25,6 +25,7 @@ export const Reply = ({
                                 if (!text) return;
                                 onSubmit(text);
                                 setText('');
+                                setIsVisible(false);
                             } }
                             className={styles.innerButton}
                         >
