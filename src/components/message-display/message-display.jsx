@@ -4,6 +4,7 @@ import { Card, cardTypes } from '../UIComponents/Card';
 import { Reply } from '../reply';
 import { useDispatch } from 'react-redux';
 import { createReply, updateReplyVotes, updatePostVotes } from '../../posts-slice';
+import styles from './message-display.module.css';
 
 export const MessageDisplay = ({
     message
@@ -24,6 +25,9 @@ export const MessageDisplay = ({
     return (
         <div>
             <Card type={cardTypes.darkGray}>
+                <Card type = {cardTypes.pink}>
+                    <h3 className={styles.title}>{message.title}</h3>
+                </Card>
                 <PostDisplay html={message.post} votes={message.votes} updateVotes={postVotes(message.id)}/>
                 {message.replies.map((reply) => 
                     <Card type={cardTypes.lightGray} key={reply.id}>
