@@ -13,7 +13,7 @@ export const initMessages = [
         ]
     },
     {
-        title: 'Hello dude',
+        title: 'Hello dude yoooo does this overflow',
         post: '<p>Does anyone wanna place tik tak toe?</p><figure class=\"table\"><table><tbody><tr><td>X</td><td>X</td><td>O</td></tr><tr><td>X</td><td>O</td><td>O</td></tr><tr><td>O</td><td>X</td><td>X</td></tr></tbody></table></figure><p>Good game!</p>',
         votes: 400,
         id: 1,
