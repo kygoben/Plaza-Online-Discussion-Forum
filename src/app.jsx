@@ -14,7 +14,7 @@ export const App = () => {
 
     return (
         <Header>
-            <Panel>
+            <Panel content = {posts}>
                 {posts.map(
                     (message, index) =>
                         <MessageDisplay

@@ -5,7 +5,8 @@
 }
 
 .panel {
-    background-color: palevioletred;
+    background-color: black;
+    color: white;
     position: absolute;
     top: 0;
     bottom: 0;
