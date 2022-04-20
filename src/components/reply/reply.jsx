@@ -15,7 +15,7 @@ export const Reply = ({
             <Card type={cardTypes.lightBlue}>
                 {isVisible ? <>
                     <Editor 
-                        text ={text}
+                        text={text}
                         setText={setText}
                     />
                     <div className={styles.end}>
