@@ -1,28 +1,27 @@
 import React from 'react';
 import { MessageDisplay } from './components/message-display';
 import { Header } from './components/header';
-import { Reply } from './components/reply';
 import { Panel } from './components/panel';
-import { useSelector, useDispatch } from 'react-redux';
-import { createPost } from './posts-slice';
+import { useSelector } from 'react-redux';
+import { NewPostDisplay } from './components/new-post/new-post';
 
 export const App = () => {
     const posts = useSelector(state => state.posts);
-    const dispatch = useDispatch();
-
-    console.log(posts);
+    const newPostDisplay = useSelector(state => state.newPostDisplay);
 
     return (
         <Header>
             <Panel content = {posts}>
-                {posts.map(
-                    (message, index) =>
-                        <MessageDisplay
-                            message={message}
-                        />
-                )}
-                Create new message
-                <Reply onSubmit={ (post) => dispatch(createPost(post)) }/>
+                {
+                    !newPostDisplay ?
+                    posts.map(
+                        (message, index) =>
+                            <MessageDisplay
+                                message={message}
+                            />
+                    ) :
+                    <NewPostDisplay/>
+                }
             </Panel>
         </Header>
     );

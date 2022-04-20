@@ -3,7 +3,7 @@ import { PostDisplay } from '../post-display';
 import { Card, cardTypes } from '../UIComponents/Card';
 import { Reply } from '../reply';
 import { useDispatch } from 'react-redux';
-import { createReply, updateReplyVotes, updatePostVotes } from '../../posts-slice';
+import { createReply, updateReplyVotes, updatePostVotes } from '../../slices/posts-slice';
 import styles from './message-display.module.css';
 
 export const MessageDisplay = ({

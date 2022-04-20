@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { initMessages } from "../dummy-data";
+import { initMessages } from "../../dummy-data";
 
 const initialState = initMessages;
 
@@ -8,9 +8,11 @@ export const postsSlice = createSlice({
     initialState,
     reducers: {
         createPost: (state, action) => {
+            console.log(action);
+
             state.push({
-                title: 'blank Title',
-                post: action.payload,
+                title: action.payload.title,
+                post: action.payload.text,
                 votes: 0,
                 id: globalThis.crypto.randomUUID(),
                 replies: []
