@@ -1,0 +1,10 @@
+.downVote{
+    transform: rotate(180deg);
+}
+
+.wrapper{
+    display:grid;
+    width: 1rem;
+    max-height: 4rem;
+    margin: 4px 10px;
+}

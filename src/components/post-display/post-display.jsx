@@ -1,7 +1,7 @@
 import React from 'react';
 import DOMPurify from 'dompurify';
 import styles from './post-display.module.css';
-import { Likes } from '../likes';
+import { Likes } from './likes';
 
 export const PostDisplay = ({
     html,

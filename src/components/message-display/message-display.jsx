@@ -28,12 +28,14 @@ export const MessageDisplay = ({
                 <Card type = {cardTypes.pink}>
                     <h3 className={styles.title}>{message.title}</h3>
                 </Card>
-                <PostDisplay html={message.post} votes={message.votes} updateVotes={postVotes(message.id)}/>
-                {message.replies.map((reply) => 
-                    <Card type={cardTypes.lightGray} key={reply.id}>
-                        <PostDisplay html={reply.post} updateVotes={replyVotes(message.id, reply.id)} votes={reply.votes}/>
-                    </Card>)
-                }
+                <div className={styles.content}>
+                    <PostDisplay html={message.post} votes={message.votes} updateVotes={postVotes(message.id)}/>
+                    {message.replies.map((reply) => 
+                        <Card type={cardTypes.lightGray} key={reply.id}>
+                            <PostDisplay html={reply.post} updateVotes={replyVotes(message.id, reply.id)} votes={reply.votes}/>
+                        </Card>)
+                    }
+                </div>
             </Card>
 
             <Reply
