@@ -15,7 +15,7 @@ export const App = () => {
                 {
                     !newPostDisplay ?
                     posts.map(
-                        (message, index) =>
+                        (message) =>
                             <MessageDisplay
                                 message={message}
                             />

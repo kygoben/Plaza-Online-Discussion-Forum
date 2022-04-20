@@ -1,7 +1,7 @@
-import { Editor } from '../editor';
-import { Card, cardTypes } from '../UIComponents/Card';
+import { Editor } from '../../editor';
+import { Card, cardTypes } from '../../UIComponents/Card';
 import React, { useState } from 'react';
-import { Button, buttonTypes } from '../UIComponents/Button';
+import { Button, buttonTypes } from '../../UIComponents/Button';
 import styles from './reply.module.css';
 
 export const Reply = ({
