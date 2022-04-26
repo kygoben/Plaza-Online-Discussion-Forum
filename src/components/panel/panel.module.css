@@ -33,4 +33,7 @@
 
 .card {
     cursor: pointer;
+    width: 227px;
+    overflow: hidden;
+    max-height: 3.5rem;
 }

@@ -22,6 +22,10 @@ export const MessageDisplay = ({
         value
     }))
 
+    const defaultText = <Card className={styles.defaultText}>
+        <h1>No Post Selected</h1>
+    </Card>
+
     return (
         !!message ?
         <div>
@@ -45,7 +49,7 @@ export const MessageDisplay = ({
                     reply
                 })) }
             />
-        </div> :
-        <div>No post selected</div>
+        </div>:
+        defaultText
     );
 }
