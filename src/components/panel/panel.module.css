@@ -5,7 +5,7 @@
 }
 
 .panel {
-    background-color: black;
+    background-color: #374D57;
     color: white;
     position: absolute;
     top: 0;
@@ -36,4 +36,5 @@
     width: 227px;
     overflow: hidden;
     max-height: 3.5rem;
+    color: #374D57;
 }

@@ -8,10 +8,11 @@ export const newPostSlice = createSlice({
     reducers: {
         toggleNewPost: (state, action) => {
             return !state;
-        }
+        },
+        setNewPost: (state, action) => action.payload
     }
 });
 
-export const { toggleNewPost } = newPostSlice.actions;
+export const { toggleNewPost, setNewPost } = newPostSlice.actions;
 
 export default newPostSlice.reducer;

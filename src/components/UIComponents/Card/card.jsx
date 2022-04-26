@@ -7,9 +7,9 @@ const typeKey = {
     [cardTypes.darkGray]: styles.darkGray,
     [cardTypes.lightGray]: styles.lightGray,
     [cardTypes.white]: styles.white,
-    [cardTypes.pink]: styles.pink,
     [cardTypes.red]: styles.red,
-    [cardTypes.lightBlue]: styles.lightBlue
+    [cardTypes.lightBlue]: styles.lightBlue,
+    [cardTypes.darkBlue]: styles.darkBlue
 };
 
 export const Card = ({
