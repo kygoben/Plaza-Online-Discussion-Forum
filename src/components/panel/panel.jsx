@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, cardTypes } from '../UIComponents/Card';
 import { Button, buttonTypes } from '../UIComponents/Button';
 import styles from './panel.module.css';
@@ -12,6 +12,7 @@ export const Panel = ({
 }) => {
     const dispatch = useDispatch();
     const displayedMessaged = useSelector(state => state.displayedMessage);
+    const [filtering, setFiltering] = useState(false);
 
 
     return (
@@ -24,9 +25,15 @@ export const Panel = ({
                     >
                         Create Post
                     </Button>
+                    <Button 
+                        type={filtering ? buttonTypes.green : buttonTypes.lightGreen}
+                        onClick={() => setFiltering((prev) => !prev)}
+                    >
+                        {`Sorting by ${filtering ? 'recency' : 'likes'}`}
+                    </Button>
                 </div>
                 {
-                    content.map(
+                    [...content].sort((a, b) => filtering && (a.votes < b.votes)).map(
                         (post) => {
                             return <Card 
                                 className={styles.card} 

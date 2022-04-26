@@ -4,6 +4,12 @@
     border: 1px solid #2A8387;
 }
 
+.lightGreen {
+    background-color: #bfffbf;
+    background-image: linear-gradient(#00b300, #00ff00);
+    border: 1px solid #00b300;
+}
+
 .green {
     background-color: #bfffbf;
     background-image: linear-gradient(#007D00, #00b300);

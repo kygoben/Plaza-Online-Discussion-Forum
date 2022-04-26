@@ -8,9 +8,7 @@ export const postsSlice = createSlice({
     initialState,
     reducers: {
         createPost: (state, action) => {
-            console.log(action);
-
-            state.push({
+            state.unshift({
                 title: action.payload.title,
                 post: action.payload.text,
                 votes: 0,
