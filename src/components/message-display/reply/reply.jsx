@@ -22,7 +22,10 @@ export const Reply = ({
                         <Button
                             type={buttonTypes.green}
                             onClick={() => {
-                                if (!text) return;
+                                if (!text) {
+                                    alert('Please enter some text.')
+                                    return;
+                                }
                                 onSubmit(text);
                                 setText('');
                                 setIsVisible(false);

@@ -18,8 +18,7 @@ export const NewPostDisplay = () => {
                 <input 
                     className={styles.title}
                     type='text'
-                    maxLength='50'
-                    placeholder="Title: 50 characters max"
+                    placeholder="Title"
                     value={title}
                     onInput={(event) => setTitle(event.target.value)}
                 />
