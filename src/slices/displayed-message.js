@@ -6,7 +6,9 @@ export const displayedMessageSlice = createSlice({
     name: 'displayedMessage',
     initialState,
     reducers: {
-        setDisplayedMessage: (state, action) => action.payload
+        setDisplayedMessage: (state, action) => {
+            return action.payload;
+        }
     }
 });
 
