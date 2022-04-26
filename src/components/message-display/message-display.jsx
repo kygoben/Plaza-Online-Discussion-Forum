@@ -23,6 +23,7 @@ export const MessageDisplay = ({
     }))
 
     return (
+        !!message ?
         <div>
             <Card type={cardTypes.darkGray}>
                 <Card type = {cardTypes.pink}>
@@ -44,6 +45,7 @@ export const MessageDisplay = ({
                     reply
                 })) }
             />
-        </div>
+        </div> :
+        <div>No post selected</div>
     );
 }
