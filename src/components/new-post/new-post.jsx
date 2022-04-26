@@ -31,7 +31,10 @@ export const NewPostDisplay = () => {
                     <Button
                         type={buttonTypes.green}
                         onClick={ () => {
-                            if (!text || !title) return;
+                            if (!text || !title) {
+                                alert("Must have a title and post content.");
+                                return;
+                            }
                             dispatch(createPost({
                                 text,
                                 title
