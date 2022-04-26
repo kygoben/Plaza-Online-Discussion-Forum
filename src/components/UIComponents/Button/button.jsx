@@ -6,7 +6,8 @@ import { buttonTypes } from './button-types';
 const typeKey = {
     [buttonTypes.green]: styles.green,
     [buttonTypes.blue]: styles.blue,
-    [buttonTypes.red]: styles.red
+    [buttonTypes.red]: styles.red,
+    [buttonTypes.lightGreen]: styles.lightGreen
 }
 
 export const Button = ({
