@@ -4,6 +4,7 @@ import { Button, buttonTypes } from '../UIComponents/Button';
 import styles from './panel.module.css';
 import { useDispatch } from 'react-redux';
 import { toggleNewPost } from '../../slices/new-post-slice';
+import { setDisplayedMessage } from '../../slices/displayed-message';
 
 export const Panel = ({
     children,
@@ -26,7 +27,7 @@ export const Panel = ({
                 {
                     content.map(
                         (post) => {
-                            return <Card>
+                            return <Card className={styles.card} onClick = {() => dispatch(setDisplayedMessage(String(post.id)))}>
                                 {post.title}
                             </Card>;
                         }

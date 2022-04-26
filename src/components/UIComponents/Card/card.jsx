@@ -14,10 +14,12 @@ const typeKey = {
 
 export const Card = ({
     children,
-    type = cardTypes.lightGray
+    type = cardTypes.lightGray,
+    className,
+    onClick = () => {}
 }) => {
     return (
-        <div className={classNames(styles.card, typeKey[type])}>
+        <div className={classNames(styles.card, typeKey[type], className)} onClick = {onClick}>
             {children}
         </div>
     );
