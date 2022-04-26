@@ -31,8 +31,7 @@ export const NewPostDisplay = () => {
                     <Button
                         type={buttonTypes.green}
                         onClick={ () => {
-                            if (!text) return;
-                            console.log(title);
+                            if (!text || !title) return;
                             dispatch(createPost({
                                 text,
                                 title
