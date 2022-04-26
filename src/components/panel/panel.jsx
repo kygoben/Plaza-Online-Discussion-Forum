@@ -1,8 +1,8 @@
 import React from 'react';
-import { Card } from '../UIComponents/Card';
+import { Card, cardTypes } from '../UIComponents/Card';
 import { Button, buttonTypes } from '../UIComponents/Button';
 import styles from './panel.module.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toggleNewPost } from '../../slices/new-post-slice';
 import { setDisplayedMessage } from '../../slices/displayed-message';
 
@@ -11,6 +11,7 @@ export const Panel = ({
     content
 }) => {
     const dispatch = useDispatch();
+    const displayedMessaged = useSelector(state => state.displayedMessage);
 
 
     return (
@@ -27,7 +28,11 @@ export const Panel = ({
                 {
                     content.map(
                         (post) => {
-                            return <Card className={styles.card} onClick = {() => dispatch(setDisplayedMessage(String(post.id)))}>
+                            return <Card 
+                                className={styles.card} 
+                                onClick={() => dispatch(setDisplayedMessage(String(post.id)))}
+                                type={String(post.id) == String(displayedMessaged) ? cardTypes.lightBlue : cardTypes.lightGray}
+                            >
                                 {post.title}
                             </Card>;
                         }
