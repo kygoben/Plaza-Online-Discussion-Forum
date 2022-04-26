@@ -28,9 +28,9 @@ export const MessageDisplay = ({
 
     return (
         !!message ?
-        <div>
+        <Card type={cardTypes.darkBlue}>
             <Card type={cardTypes.darkGray}>
-                <Card type = {cardTypes.pink}>
+                <Card>
                     <h3 className={styles.title}>{message.title}</h3>
                 </Card>
                 <div className={styles.content}>
@@ -49,7 +49,7 @@ export const MessageDisplay = ({
                     reply
                 })) }
             />
-        </div>:
+        </Card>:
         defaultText
     );
 }

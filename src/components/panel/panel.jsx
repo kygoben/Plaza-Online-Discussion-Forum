@@ -5,6 +5,7 @@ import styles from './panel.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleNewPost } from '../../slices/new-post-slice';
 import { setDisplayedMessage } from '../../slices/displayed-message';
+import { setNewPost } from '../../slices/new-post-slice';
 
 export const Panel = ({
     children,
@@ -37,7 +38,10 @@ export const Panel = ({
                         (post) => {
                             return <Card 
                                 className={styles.card} 
-                                onClick={() => dispatch(setDisplayedMessage(String(post.id)))}
+                                onClick={ () => {
+                                    dispatch(setNewPost(false));
+                                    dispatch(setDisplayedMessage(String(post.id)));
+                                } }
                                 type={String(post.id) == String(displayedMessaged) ? cardTypes.lightBlue : cardTypes.lightGray}
                             >
                                 {post.title}
