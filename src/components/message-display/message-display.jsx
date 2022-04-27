@@ -20,7 +20,9 @@ export const MessageDisplay = ({
     const postVotes = (postId) => (value) => dispatch(updatePostVotes({
         postId,
         value
-    }))
+    }));
+
+    console.log(message);
 
     const defaultText = <Card className={styles.defaultText}>
         <h1>No Post Selected</h1>

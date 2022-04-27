@@ -43,6 +43,7 @@ export const Panel = ({
                                     dispatch(setDisplayedMessage(String(post.id)));
                                 } }
                                 type={String(post.id) == String(displayedMessaged) ? cardTypes.lightBlue : cardTypes.lightGray}
+                                key={post.id}
                             >
                                 {post.title}
                             </Card>;
