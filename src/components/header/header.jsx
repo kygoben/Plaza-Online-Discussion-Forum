@@ -6,9 +6,10 @@ export const Header = (props) => {
         <nav>
          <div>
             <div className = {styles.header}>
-            <a class="active" href="#home">PLAZA</a>
-            <a href="#news">HOME</a>
-            <a href="#contact">ACCOUNT</a>
+            <a className="active" href="#home">Plaza</a>
+            <a href="#home">Home</a>
+            <a href="#signup">Sign Up</a>
+            <a className="login" href="#login">Log In</a>
             </div>
             {props.children}
         </div>

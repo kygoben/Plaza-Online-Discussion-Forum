@@ -1,12 +1,11 @@
 .header { 
     height: 3rem;
-    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+    background: linear-gradient(#21AE5E, #36A9AE);
     background-color: #089A48;
     color:white;
     text-align:left;
     display: flex;
-    text-indent: 25px;
-    padding-top: 5px;
+    padding-top: 1px;
     size: 200px;
     font-family: Copperplate;
     font-size: 30px;
@@ -20,10 +19,12 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-family: -apple-system,".SFNSDisplay-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .header a:hover {
-    background-color: #ddd;
+    background-color: #36A9AE;
+    background-image: linear-gradient(#37ADB2, #329CA0);
     color: black;
   }
 
@@ -32,5 +33,13 @@
     color: white;
   }
 
+  .login {
+    background-color: #04AA6D;
+    color: white;
+    text-align: right;
+  }
+  .active {
+      font-size: 30px;
+  }
 
 
