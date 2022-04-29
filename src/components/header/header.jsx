@@ -3,12 +3,17 @@ import styles from './header.module.css';
 
 export const Header = (props) => {
     return (
-        <div>
+        <nav>
+         <div>
             <div className = {styles.header}>
-                <strong>PLAZA</strong>
+            <a class="active" href="#home">PLAZA</a>
+            <a href="#news">HOME</a>
+            <a href="#contact">ACCOUNT</a>
             </div>
             {props.children}
         </div>
+        </nav>
+
     )
 
 }
