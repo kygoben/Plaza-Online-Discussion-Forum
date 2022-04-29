@@ -42,4 +42,12 @@
       font-size: 30px;
   }
 
+  .divider {
+    display: inline-block;
+    width: 2px;
+    background-color: black;
+    margin: 0 10px;
+    height: 1em;
+  }
+
 
