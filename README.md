@@ -1,9 +1,7 @@
 # Plaza
 
 ## External Tools
-Here is the link to our [figma page](https://www.figma.com/file/VgE8XkgR3Uhg7tAJx1b7zJ/Plaza-Prototype?node-id=0%3A1).  
-Here is the link to our [gitlab repo](https://git.linux.iastate.edu/Spring2022-CS319/g19/plaza).  
-Here is the link to our [trello board](https://trello.com/b/cN1yAJkW/g19).
+Here is the link to our [figma page](https://www.figma.com/file/VgE8XkgR3Uhg7tAJx1b7zJ/Plaza-Prototype?node-id=0%3A1).
 
 ## Starting Devlopment Server
 Make sure you have the packages installed (like React, all the other things listed in the `package.json` file). If you see a folder called `node_modules`, then everything is installed. If not, run either `npm i`, `npm install`, or `npm ci`.
